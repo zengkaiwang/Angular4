@@ -1,0 +1,19 @@
+/dist
+*/dist
+
+/node_modules
+*/node_modules
+
+/.idea
+*/.idea
+
+npm-debug.log
+*/npm-debug.log
+package-lock.json
+*/package-lock.json
+
+# e2e
+/e2e/*.js
+*/e2e/*.js
+*/e2e/*.map
+/e2e/*.map
