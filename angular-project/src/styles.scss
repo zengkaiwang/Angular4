@@ -2,3 +2,10 @@
 .wang {
 	color: blue;
 }
+
+$nav-color: #F90;
+.nav {
+  $width: 100px;
+  width: $width;
+  color: $nav-color;
+}
