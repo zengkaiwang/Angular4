@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import './widget/script/date';
 import './widget/script/string';
 
 import './widget/script/base64.js';

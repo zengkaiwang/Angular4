@@ -1,10 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<button nz-button nzType="primary">Button</button>
-<div class="wang">
-  测试styles.css全局样式文件有效性
+
+<div class="app">	
+	<div class="top">
+		<nav>
+			<h3><a routerLink="/">首页</a></h3>
+			<h3><a routerLink="/user">我的</a></h3>  
+		</nav>
+	</div>
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>
 </div>
 
-<div class="nav">
-	测试scss配置
-</div>
 
