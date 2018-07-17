@@ -6,29 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 
-// import { RouterModule, Routes } from '@angular/router';
 import { routing } from './app.routing';
-import { PagesModule } from './pages/pages.module';
 
 
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-// import { HomeComponent } from './pages/home/home.component';
-// import { UserComponent } from './pages/user/user.component';
 registerLocaleData(zh);
-
-// export const ROUTES: Routes = [
-//   { path: '', pathMatch: 'full', redirectTo: 'index'}
-//   { path: 'index', component: HomeComponent},
-//   { path: 'user', component: UserComponent}
-// ]
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // HomeComponent,
-    // UserComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +24,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot(),
-    // RouterModule.forRoot(ROUTES),
     routing,
-    PagesModule
   ],
   bootstrap: [ AppComponent ]
 })
