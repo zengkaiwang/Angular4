@@ -19,7 +19,9 @@ export class HomeComponent implements OnInit {
   	// console.log(that.homeService.downFile);
   	// that.homeService.test1();
   	// that.homeService.test2();
-  	that.homeService.test3();
+  	// that.homeService.test3();
+  	that.homeService.httpPostExample();
+  	// that.homeService.httpPostExample2();
   }
 
 }
