@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   	let that = this;
   	// console.log(that.homeService.downFile);
   	// that.homeService.test1();
-  	that.homeService.test2();
+  	// that.homeService.test2();
+  	that.homeService.test3();
   }
 
 }

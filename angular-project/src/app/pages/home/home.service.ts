@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
-import { HttpHeaders , HttpClient} from '@angular/common/http';
-import {HttpParams} from "@angular/common/http";
+import { HttpHeaders , HttpClient， HttpParams} from '@angular/common/http';
 
 import { BaseService } from '../base-service';
 
@@ -24,8 +23,26 @@ export class HomeService extends BaseService {
     .set('orderBy', 'aaa')
     .set('limitToFirst', "1");
 
-    this.httpClient.get("qwqwqwqw", {params})
-        .subscribe(data => console.log(data))
-  }  
+    this.httpClient.get(`url`, {params}).subscribe((res) => {
+      // 成功回调
+    }, (err) => {
+      // 失败回调
+    });        
+  }
+  //带参数+带请求头的get请求
+  test3() {
+  	const params = new HttpParams()
+    .set('orderBy', 'aaa')
+    .set('limitToFirst', "1");
+
+    const headers = new HttpHeaders().set("X-CustomHeader", "wulalalal");
+
+    this.httpClient.get(`url`, {headers: headers, params: params}).subscribe((res) => {
+      // 成功回调
+    }, (err) => {
+      // 失败回调
+    });        
+  }     
+
 
 }
