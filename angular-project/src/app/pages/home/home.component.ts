@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   	let that = this;
   	// console.log(that.homeService.downFile);
-  	that.homeService.test1();
+  	// that.homeService.test1();
+  	that.homeService.test2();
   }
 
 }
