@@ -7,6 +7,8 @@ import { PagesComponent } from './pages.component'
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 
+import { HomeService } from './home/home.service'
+
 export const ROUTES: Routes = [
   {
     path: '',
@@ -28,6 +30,9 @@ export const ROUTES: Routes = [
 		PagesComponent,
 		HomeComponent,
 		UserComponent
+	],
+	providers: [
+		HomeService
 	]
 })
 
