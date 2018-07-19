@@ -14,7 +14,11 @@ export class ParentPage {
     // }, 1000)
   }
 
-  numberIChange(i:number){
-      this.i = i;
+  // numberIChange(i:number){
+  //     this.i = i;
+  // }
+  
+  test() {
+  	console.log(1211212);
   }
 }

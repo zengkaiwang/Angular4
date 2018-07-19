@@ -1,9 +1,12 @@
-import { Component, Input, EventEmitter, Output  } from '@angular/core';
+import { Component, Input, EventEmitter, Output , Inject, forwardRef  } from '@angular/core';
+
+import{ParentPage} from '../parent/parent';
 
 @Component({
   selector: 'page-child',
   templateUrl: 'child.html',
 })
+
 
 
 export class ChildPage {
@@ -14,9 +17,15 @@ export class ChildPage {
 
 	Number: number = 0;
 
-  constructor() {
+  constructor( @Inject(forwardRef(() => ParentPage)) private app: ParentPage ) {
+    // setInterval(() => {
+    //   this.changeNumber.emit(++this.Number);
+    // }, 1000)
+        
     setInterval(() => {
-      this.changeNumber.emit(++this.Number);
-    }, 1000)
+        this.app.i++;
+    }, 1000);
+
+    this.app.test();
   }
 }
