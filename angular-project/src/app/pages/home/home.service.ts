@@ -46,7 +46,8 @@ export class HomeService extends BaseService {
   //带请求头的post请求
 	httpPostExample() {
 		const headers = new HttpHeaders().set("X-CustomHeader", "qwqwqwqwqqww");
-    this.httpClient.post("url", { "key1": "aaa", "key1": "aaa" }, {headers: headers}).subscribe((res) => {
+    // this.httpClient.post("url", { "key1": "aaa", "key1": "aaa" }, {headers: headers}).subscribe((res) => {
+    this.httpClient.post("url", { "key1": "aaa", "key1": "aaa" }, {headers}).subscribe((res) => {
       // 成功回调
     }, (err) => {
       // 失败回调
