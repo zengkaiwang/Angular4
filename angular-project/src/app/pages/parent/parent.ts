@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild } from '@angular/core';
+
+import{ChildPage}from '../child/child';
 
 @Component({
   selector: 'page-parent',
@@ -6,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ParentPage {
 
-  i: number = 0;
+	@ViewChild(ChildPage) private child:ChildPage;
+
+  // i: number = 0;
 
   constructor() {
     // setInterval(() => {
@@ -21,4 +25,11 @@ export class ParentPage {
   test() {
   	console.log(1211212);
   }
+
+  ngAfterViewInit() {
+      setInterval(()=> {
+          // this.child.i++;
+      }, 1000)
+      // this.child.test2()
+  }  
 }
