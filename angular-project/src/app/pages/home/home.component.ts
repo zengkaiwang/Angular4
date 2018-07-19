@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   	// that.homeService.test1();
   	// that.homeService.test2();
   	// that.homeService.test3();
-  	that.homeService.httpPostExample();
+  	// that.homeService.httpPostExample();
   	// that.homeService.httpPostExample2();
   }
 

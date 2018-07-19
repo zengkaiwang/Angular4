@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { HttpHeaders , HttpClient， HttpParams} from '@angular/common/http';
+import { HttpHeaders , HttpClient, HttpParams} from '@angular/common/http';
 
 import { BaseService } from '../base-service';
 
@@ -47,7 +47,7 @@ export class HomeService extends BaseService {
 	httpPostExample() {
 		const headers = new HttpHeaders().set("X-CustomHeader", "qwqwqwqwqqww");
     // this.httpClient.post("url", { "key1": "aaa", "key1": "aaa" }, {headers: headers}).subscribe((res) => {
-    this.httpClient.post("url", { "key1": "aaa", "key1": "aaa" }, {headers}).subscribe((res) => {
+    this.httpClient.post("url", { "key1": "aaa", "key2": "aaa" }, {headers}).subscribe((res) => {
       // 成功回调
     }, (err) => {
       // 失败回调

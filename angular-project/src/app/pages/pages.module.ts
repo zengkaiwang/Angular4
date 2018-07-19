@@ -7,6 +7,10 @@ import { PagesComponent } from './pages.component'
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 
+import { ParentPage } from './parent/parent';
+import { ChildPage } from './child/child';
+
+
 import { HomeService } from './home/home.service'
 
 export const ROUTES: Routes = [
@@ -14,9 +18,11 @@ export const ROUTES: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-    	// { path: '', redirectTo: 'index', pathMatch: 'full' },
+    	{ path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: 'index', component: HomeComponent },
-      { path: 'user', component: UserComponent }
+      { path: 'user', component: UserComponent },
+      { path: 'parent', component: ParentPage },
+      { path: 'child', component: ChildPage }
     ]
   }  
 ]
@@ -29,7 +35,9 @@ export const ROUTES: Routes = [
 	declarations: [
 		PagesComponent,
 		HomeComponent,
-		UserComponent
+		UserComponent,
+		ParentPage,
+		ChildPage
 	],
 	providers: [
 		HomeService
