@@ -5,10 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: 'parent.html',
 })
 export class ParentPage {
+
   i: number = 0;
+
   constructor() {
-    setInterval(() => {
-      this.i++;
-    }, 1000)
+    // setInterval(() => {
+    //   this.i++;
+    // }, 1000)
+  }
+
+  numberIChange(i:number){
+      this.i = i;
   }
 }
