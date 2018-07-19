@@ -1,6 +1,8 @@
 import { Component, Input, EventEmitter, Output , Inject, forwardRef  } from '@angular/core';
 
-// import{ParentPage} from '../parent/parent';
+import{KmyService}from "../child/myService"
+
+import{ParentPage} from '../parent/parent';
 
 @Component({
   selector: 'page-child',
@@ -18,7 +20,10 @@ export class ChildPage {
 	// Number: number = 0;
 	i:number = 0;
 
-  constructor( /*@Inject(forwardRef(() => ParentPage)) private app: ParentPage */) {
+  constructor( 
+  	@Inject(forwardRef(() => ParentPage)) private app: ParentPage,
+  	public service:KmyService
+  	) {
     // setInterval(() => {
     //   this.changeNumber.emit(++this.Number);
     // }, 1000)

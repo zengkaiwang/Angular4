@@ -11,7 +11,8 @@ import { ParentPage } from './parent/parent';
 import { ChildPage } from './child/child';
 
 
-import { HomeService } from './home/home.service'
+import { HomeService } from './home/home.service';
+import { KmyService } from './child/myService';
 
 export const ROUTES: Routes = [
   {
@@ -40,7 +41,8 @@ export const ROUTES: Routes = [
 		ChildPage
 	],
 	providers: [
-		HomeService
+		HomeService,
+		KmyService
 	]
 })
 

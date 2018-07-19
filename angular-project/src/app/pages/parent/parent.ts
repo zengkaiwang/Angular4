@@ -1,6 +1,7 @@
 import { Component , ViewChild } from '@angular/core';
 
-import{ChildPage}from '../child/child';
+// import{ChildPage}from '../child/child';
+import{ KmyService }from '../child/myService'
 
 @Component({
   selector: 'page-parent',
@@ -8,14 +9,16 @@ import{ChildPage}from '../child/child';
 })
 export class ParentPage {
 
-	@ViewChild(ChildPage) private child:ChildPage;
+	// @ViewChild(ChildPage) private child:ChildPage;
 
-  // i: number = 0;
+  i: number = 0;
 
-  constructor() {
-    // setInterval(() => {
-    //   this.i++;
-    // }, 1000)
+  constructor( service:KmyService ) {
+    setInterval(() => {
+      // this.i++;
+      service.i++;
+    }, 1000)
+    
   }
 
   // numberIChange(i:number){
