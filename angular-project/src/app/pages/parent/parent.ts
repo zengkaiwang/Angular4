@@ -37,6 +37,28 @@
 //   }  
 // }
 
+// import { Component } from '@angular/core';
+// import{myService}from '../child/myService'
+
+// @Component({
+//   selector: 'page-parent',
+//   templateUrl: 'parent.html',
+// })
+
+// export class ParentPage {
+
+//     i:number = 0;
+
+//     constructor(service:myService) {
+
+//         setInterval(()=> {
+//             service.change.emit(++this.i);
+//         }, 1000)
+
+//     }
+// }
+
+//通过订阅组件间通信
 import { Component } from '@angular/core';
 import{myService}from '../child/myService'
 
@@ -44,16 +66,13 @@ import{myService}from '../child/myService'
   selector: 'page-parent',
   templateUrl: 'parent.html',
 })
-
 export class ParentPage {
+	
+    i:number=0;
 
-    i:number = 0;
-
-    constructor(service:myService) {
-
+    constructor(public service:myService) {
         setInterval(()=> {
-            service.change.emit(++this.i);
+             this.service.StatusMission(this.i++);
         }, 1000)
-        
     }
 }

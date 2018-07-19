@@ -8,14 +8,32 @@
 // }
 
 
-import {Component, Injectable, EventEmitter} from '@angular/core';
+// import {Component, Injectable, EventEmitter} from '@angular/core';
+
+// @Injectable()
+
+// export class myService {
+//     change: EventEmitter<number>;
+
+//     constructor(){
+//         this.change = new EventEmitter();
+//     }
+// }
+
+
+//通过订阅组件间通信
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 
 export class myService {
-    change: EventEmitter<number>;
 
-    constructor(){
-        this.change = new EventEmitter();
-    }
+  private Source=new Subject<any>();
+
+  Status$=this.Source.asObservable();
+  
+  StatusMission(message: any) {
+      this.Source.next(message);
+  }
 }

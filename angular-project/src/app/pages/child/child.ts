@@ -40,23 +40,50 @@
 //   }
 // }
 
-import { Component,  EventEmitter} from '@angular/core';
+// import { Component,  EventEmitter} from '@angular/core';
 
-import{myService}from "../child/myService"
+// import{myService}from "../child/myService"
+
+// @Component({
+//   selector: 'page-child',
+//   templateUrl: 'child.html',
+// })
+
+// export class ChildPage {
+
+//     i:number = 0;
+
+//     constructor(public service:myService){
+//         service.change.subscribe((value:number)=>{
+//             this.i = value;
+//         })
+//     }
+    
+// }
+
+//通过订阅组件间通信
+import { Component, Injectable } from '@angular/core'
+import { myService } from "../child/myService"
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'page-child',
-  templateUrl: 'child.html',
+    selector: 'page-child',
+    templateUrl: 'child.html',
 })
 
 export class ChildPage {
+    i:number=0;
 
-    i:number = 0;
+    subscription: Subscription;
 
-    constructor(public service:myService){
-        service.change.subscribe((value:number)=>{
-            this.i = value;
-        })
+    constructor(private Service: myService) {
+        this.subscription = Service.Status$.subscribe(message => {
+            this.i=message;
+        });
     }
-    
+
+    ngOnDestroy() {
+    	//取消订阅节省资源
+      this.subscription.unsubscribe();
+    }
 }
