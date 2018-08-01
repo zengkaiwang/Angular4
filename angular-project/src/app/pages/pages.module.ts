@@ -2,6 +2,7 @@ import { NgModule }  from '@angular/core';
 import { CommonModule }  from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { PagesComponent } from './pages.component'
 import { HomeComponent } from './home/home.component';
@@ -32,7 +33,8 @@ export const ROUTES: Routes = [
 @NgModule({
 	imports: [
 		CommonModule,
-		RouterModule.forChild(ROUTES)
+		RouterModule.forChild(ROUTES),
+		NgZorroAntdModule.forRoot()
 	],
 	declarations: [
 		PagesComponent,
