@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HomeService } from './home.service'
+import { HomeService } from './home.service';
+
+import "../../widget/script/video.js";
+declare var videofun: any;
 
 @Component({
   selector: 'app-home',
@@ -22,6 +25,9 @@ export class HomeComponent implements OnInit {
   	// that.homeService.test3();
   	// that.homeService.httpPostExample();
   	// that.homeService.httpPostExample2();
+    let ff = new videofun()
+    console.log('videofun', ff.showVideo)
+    ff.showVideo('10.192.19.124','admin','sany3188')
   }
 
 }
