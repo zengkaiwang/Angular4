@@ -9,3 +9,8 @@
 <div class="box">
   <span class="title">hello</span>
 </div>
+
+<div ngDraggable class="card" [handle]="dragHtml">
+  <div #dragHtml class="card-header">这里可以拖动窗口</div>
+  <div class="card-block">这里不能拖动窗口</div>
+</div>

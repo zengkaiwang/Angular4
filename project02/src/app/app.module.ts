@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgZorroAntdModule } from 'ng-zorro-antd'
+import { AngularDraggableModule } from 'angular2-draggable'
 
 
 import { AppComponent } from './app.component';
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NgZorroAntdModule.forRoot()
+    NgZorroAntdModule.forRoot(),
+    AngularDraggableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
