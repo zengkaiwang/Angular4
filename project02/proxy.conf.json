@@ -1,0 +1,10 @@
+{
+	"/boss-product": {
+	    "target": "http://boss-gateway.bdn_boss-dev.irootechapp.com",
+	    "secure": false,
+	    "changeOrigin": true,
+	    "pathRewrite": {
+	        "^/boss-product": "/boss-product"
+	    }
+    }
+}
