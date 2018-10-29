@@ -62,6 +62,7 @@
 // }
 
 //通过订阅组件间通信
+//child.ts
 import { Component, Injectable } from '@angular/core'
 import { myService } from "../child/myService"
 import { Subscription } from 'rxjs/Subscription';

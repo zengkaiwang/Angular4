@@ -59,6 +59,7 @@
 // }
 
 //通过订阅组件间通信
+//parent.ts文件
 import { Component } from '@angular/core';
 import{myService}from '../child/myService'
 
