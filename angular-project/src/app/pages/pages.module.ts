@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 
 import { ParentPage } from './parent/parent';
 import { ChildPage } from './child/child';
+import { Child02Page } from './child/child02';
 
 
 import { HomeService } from './home/home.service';
@@ -41,7 +42,8 @@ export const ROUTES: Routes = [
 		HomeComponent,
 		UserComponent,
 		ParentPage,
-		ChildPage
+		ChildPage,
+		Child02Page
 	],
 	providers: [
 		HomeService,
